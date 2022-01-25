@@ -49,4 +49,18 @@ GROUP BY gender;
  We have 3 girls!
 (2 rows)
 ```
+4.
+```
+SELECT name, count(*) AS words from vocabulary 
+LEFT JOIN word ON (vocabulary.id = word.vocabulary_id) 
+GROUP BY name;
 
+  name   | words
+---------+-------
+ animals |    10
+ school  |    10
+ SF      |    10
+ human   |    10
+ nature  |    10
+(5 rows)
+```
