@@ -40,7 +40,7 @@ CASE gender
             WHEN 'f' THEN ' girls!'
 END
 AS "Gender information:" 
-FROM users_data 
+FROM module_table 
 GROUP BY gender;
 
  Gender information:
