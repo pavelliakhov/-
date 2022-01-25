@@ -32,3 +32,21 @@ FROM module_table;
 (6 rows)
 ```
 3.
+```
+SELECT
+'We have ' || count(*) ||
+CASE gender 
+            WHEN 'm' THEN ' boys!'
+            WHEN 'f' THEN ' girls!'
+END
+AS "Gender information:" 
+FROM users_data 
+GROUP BY gender;
+
+ Gender information:
+---------------------
+ We have 3 boys!
+ We have 3 girls!
+(2 rows)
+```
+
